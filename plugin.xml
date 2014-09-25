@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="ch.h2m.cordova.plugin"
+      version="0.1.0">
+    <name>PowerPlugin</name>
+    <description>Plugin for power mgmt</description>
+    <license>MIT</license>
+    <keywords>phonegap,power</keywords>
+
+
+    <js-module src="www/power.js" name="power">
+        <clobbers target="window.power" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PowerPlugin">
+                <param name="android-package" value="ch.h2m.cordova.plugin.Power"/>
+            </feature>
+        </config-file>
+       
+	   <config-file target="AndroidManifest.xml" parent="/manifest">
+           <uses-permission android:name="android.permission.DEVICE_POWER"></uses-permission>
+        </config-file>
+	   
+        <source-file src="src/android/Power.java" target-dir="src/ch/h2m/cordova/plugin" />      
+     </platform>          
+</plugin>
