@@ -1,5 +1,5 @@
 var power = {
-    enable: function(enable, successCallback, errorCallback) {
+    wakeup: function(enable, successCallback, errorCallback) {
         cordova.exec(
             successCallback, 
             errorCallback, 
@@ -8,7 +8,7 @@ var power = {
             []
         ); 
     },
-	disable: function(enable, successCallback, errorCallback) {
+	sleep: function(enable, successCallback, errorCallback) {
         cordova.exec(
             successCallback, 
             errorCallback, 

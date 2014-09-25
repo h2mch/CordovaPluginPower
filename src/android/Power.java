@@ -16,6 +16,7 @@ public class Power extends CordovaPlugin {
 
     private PowerManager powerManager;
 
+
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         this.powerManager = (PowerManager) cordova.getActivity().getSystemService(Context.POWER_SERVICE);

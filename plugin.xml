@@ -2,8 +2,8 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="ch.h2m.cordova.plugin"
-      version="0.1.0">
-    <name>PowerPlugin</name>
+      version="0.2.0">
+    <name>Power</name>
     <description>Plugin for power mgmt</description>
     <license>MIT</license>
     <keywords>phonegap,power</keywords>
@@ -17,7 +17,7 @@
     <platform name="android">
 	
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="PowerPlugin">
+            <feature name="Power">
                 <param name="android-package" value="ch.h2m.cordova.plugin.Power"/>
             </feature>
         </config-file>
